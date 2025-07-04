@@ -3,8 +3,8 @@ FROM node:22-alpine
 WORKDIR /app
 
 # This caches dependencies, so you only reinstall when package.json changes
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
-RUN npm install # Or yarn install / pnpm install
+COPY package.json package-lock.json ./
+RUN npm install
 
 # Expose the port Next.js dev server runs on
 EXPOSE 3000
