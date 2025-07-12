@@ -5,8 +5,8 @@ export interface LoginPayload {
 };
 export interface RegisterPayload extends LoginPayload {
   username: string;
-  firt_name: string;
-  last_name: string;
+  firstName: string;
+  lastName: string;
   admin?: boolean; 
 };
 export interface AuthResponse {
